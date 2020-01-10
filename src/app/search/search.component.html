@@ -1,0 +1,27 @@
+<div class="row">
+    <h2>Choose your selection!</h2>
+    <ul class="searchList">
+    <li *ngFor="let type of types">
+        <span class="badge">{{type.id}}</span> {{type.type}}
+    </li>
+    </ul>
+
+    <ul class="searchList">
+    <li *ngFor="let dietRestrict of dietRestrictions">
+        <span class="badge">{{dietRestrict.id}}</span> {{dietRestrict.restriction}}
+    </li>
+    </ul>
+
+    <ul class="searchList">
+    <li *ngFor="let price of prices">
+        <span class="badge">{{price.id}}</span> {{price.price}}
+    </li>
+    </ul>
+
+    <ul class="searchList">
+    <li *ngFor="let distance of distances">
+        <span class="badge">{{distance.id}}</span> {{distance.distance}}
+    </li>
+    </ul>
+
+</div>
