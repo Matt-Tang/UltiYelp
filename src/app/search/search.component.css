@@ -1,4 +1,10 @@
 /* searchListComponent's private CSS styles */
+
+body {
+    background: #509e2f;
+}
+
+
 .searchList {
     margin: 0 0 2em 0;
     list-style-type: none;
@@ -19,13 +25,13 @@
 }
 
 .searchList li:hover {
-    color: #607D8B;
+    color:orange;
     background-color: #DDD;
     left: .1em;
 }
 
 .searchList li.selected {
-    background-color: #CFD8DC;
+    background-color: red;
     color: white;
 }
 
@@ -47,6 +53,10 @@
     height: 1.8em;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+}
+
+.searchList .badge:visited {
+    color: red;
 }
 
 .h2{

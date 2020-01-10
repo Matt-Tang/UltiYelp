@@ -1,27 +1,51 @@
 <div class="row">
     <h2>Choose your selection!</h2>
     <ul class="searchList">
-    <li *ngFor="let type of types">
+    <li *ngFor="let type of types"
+    [class.selected]="type === selectedFoodType"
+    (click)="onSelectFoodType(type)">
         <span class="badge">{{type.id}}</span> {{type.type}}
     </li>
     </ul>
 
     <ul class="searchList">
-    <li *ngFor="let dietRestrict of dietRestrictions">
+    <li *ngFor="let dietRestrict of dietRestrictions"
+    [class.selected]="dietRestrict === selectedDietRestriction"
+    (click)="onSelectDietRestriction(dietRestrict)">
         <span class="badge">{{dietRestrict.id}}</span> {{dietRestrict.restriction}}
     </li>
     </ul>
 
     <ul class="searchList">
-    <li *ngFor="let price of prices">
+    <li *ngFor="let price of prices"
+    [class.selected]="price === selectedPrice"
+    (click)="onSelectPrice(price)">
         <span class="badge">{{price.id}}</span> {{price.price}}
     </li>
     </ul>
 
     <ul class="searchList">
-    <li *ngFor="let distance of distances">
+    <li *ngFor="let distance of distances"
+    [class.selected]="distance === selectedDistance"
+    (click)="onSelectDistance(distance)">
         <span class="badge">{{distance.id}}</span> {{distance.distance}}
     </li>
     </ul>
 
+</div>
+
+<div *ngIf="selectedFoodType">
+    <h2>{{selectedFoodType.type}}</h2>>
+</div>
+
+<div *ngIf="selectedDietRestriction">
+    <h2>{{selectedDietRestriction.restriction}}</h2>>
+</div>
+
+<div *ngIf="selectedPrice">
+    <h2>{{selectedPrice.price}}</h2>>
+</div>
+
+<div *ngIf="selectedDistance">
+    <h2>{{selectedDistance.distance}}</h2>>
 </div>

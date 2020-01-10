@@ -23,6 +23,27 @@ export class SearchComponent implements OnInit {
   prices = PRICES;
   distances = DISTANCES;
 
+  selectedFoodType : FoodType;
+  selectedDietRestriction : DietRestriction;
+  selectedPrice : Price;
+  selectedDistance: Distance;
+
+  onSelectFoodType(type: FoodType): void {
+    this.selectedFoodType = type;
+  }
+
+  onSelectDietRestriction(dietRestriction: DietRestriction): void {
+    this.selectedDietRestriction = dietRestriction;
+  }
+
+  onSelectPrice(price: Price): void {
+    this.selectedPrice = price;
+  }
+
+  onSelectDistance(distance: Distance): void {
+    this.selectedDistance = distance;
+  }
+
   constructor() { }
 
   ngOnInit() {
