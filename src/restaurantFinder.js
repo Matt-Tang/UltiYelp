@@ -6,16 +6,7 @@ function onClick () {
     var radius = 1000;
     
     console.log('HERE');
-    var url = 'https://api.yelp.com/v3/businesses/search?'+ 'location=' + location + '&radius='+radius + '&limit=1';
-    if (term) {
-        url += '&term=' + term;
-    }
-    if (radius){
-        url+= '&radius=' + radius;
-    }
-    if (price){
-        price += '&price=' + price;
-    } 
+    var url = 'https://api.yelp.com/v3/businesses/search?'+ 'location=' + location + '&radius='+radius + '&limit=1' + '&term=' + term + '&price=' + price; 
     
     var key = 'Bearer 5qbNtRLgi9Qy1T48fKEE-ryGRujEbs-NJD8Yv3-LzqCddMUbV5o6n45b62vLdbYMmL-jdmIMhMEitgyKK_dc5D19gigPSKPsYg4eAKPsESUvEC9nSrdrKtBesX0XXnYx';
     fetch (url, {
@@ -25,13 +16,10 @@ function onClick () {
             'Access-Control-Allow-Origin': '*'
         }
     }).then(response => response.json().then (responseJson => {
-        // alert('went through');
-        alert(responseJson);
         var redirect = responseJson.businesses[0].url;
-        window.location.href = redirect
-        console.log();
+        window.location.href = redirect;
+        
     }))
-    
 }
 
 function randomPlace (){
