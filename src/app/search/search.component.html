@@ -32,8 +32,13 @@
     </li>
     </ul>
 
+    <div *ngIf="selectedFoodType && selectedDietRestriction && selectedPrice && selectedDistance">
+        <button type="button">Click Me!</button>
+    </div>
+
 </div>
 
+<!--
 <div *ngIf="selectedFoodType">
     <h2>{{selectedFoodType.type}}</h2>>
 </div>
@@ -49,3 +54,5 @@
 <div *ngIf="selectedDistance">
     <h2>{{selectedDistance.distance}}</h2>>
 </div>
+
+-->
