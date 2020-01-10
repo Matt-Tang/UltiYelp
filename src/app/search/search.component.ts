@@ -61,8 +61,11 @@ export class SearchComponent implements OnInit {
     else if (this.selectedDistance.id == 2){
       radius = 1500;
     }
-    else {
+    else if (this.selectedDistance.id == 3){
       radius = 10000;
+    }
+    else {
+      radius = 30000;
     }
 
     console.log('HERE');
