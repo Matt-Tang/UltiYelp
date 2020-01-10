@@ -33,7 +33,7 @@
     </ul>
 
     <div *ngIf="selectedFoodType && selectedDietRestriction && selectedPrice && selectedDistance">
-        <button onclick="onClick()" type="button">Submit!</button>
+        <button (click)="onClick()" type="button">Submit!</button>
     </div>
 
 </div>
